@@ -1,0 +1,297 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HelpDesk",
+		"_postman_id": "0cbdddd9-9ec1-4406-e29c-1df8119e2a62",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-Auth",
+			"request": {
+				"url": "http://localhost:8080/api/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"customer@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2-Criar",
+			"request": {
+				"url": "http://localhost:8080/api/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBoZWxwZGVzay5jb20iLCJjcmVhdGVkIjoxNTQ0NjM0OTY4ODExLCJleHAiOjE1NDUyMzk3Njh9.Pl0xZ1ajQjm2mVXFeN0ay5nI0cKqM1H2hTunvArKsqlTonQFihVCqP3oBscR0lbubFLBkB_AkA_WnoHYJ8BhjQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"customer@gmail.com\",\n\t\"password\": \"123456\",\n\t\"profile\": \"ROLE_CUSTOMER\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3-Atualizar",
+			"request": {
+				"url": "http://localhost:8080/api/user",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBoZWxwZGVzay5jb20iLCJjcmVhdGVkIjoxNTQ0NjE1MDk3NDE1LCJleHAiOjE1NDUyMTk4OTd9.BfM2DFhH8_PmRBLVMjUDd8ZntJUWg33K_8NNeEn4UvTPFlAjLtiyQddMQEHbdhWrgZjdJdHwLzgwdlUqdL7BfQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5c10f35e9213216d4d13a245\",\n\t\"email\": \"klayrocha@gmail.com\",\n\t\"password\": \"123456\",\n\t\"profile\": \"ROLE_ADMIN\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4-FindById",
+			"request": {
+				"url": "http://localhost:8080/api/user/5c10f35e9213216d4d13a245",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBoZWxwZGVzay5jb20iLCJjcmVhdGVkIjoxNTQ0NjE1MDk3NDE1LCJleHAiOjE1NDUyMTk4OTd9.BfM2DFhH8_PmRBLVMjUDd8ZntJUWg33K_8NNeEn4UvTPFlAjLtiyQddMQEHbdhWrgZjdJdHwLzgwdlUqdL7BfQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "5-FindAll",
+			"request": {
+				"url": "http://localhost:8080/api/user/0/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBoZWxwZGVzay5jb20iLCJjcmVhdGVkIjoxNTQ0NjE1MDk3NDE1LCJleHAiOjE1NDUyMTk4OTd9.BfM2DFhH8_PmRBLVMjUDd8ZntJUWg33K_8NNeEn4UvTPFlAjLtiyQddMQEHbdhWrgZjdJdHwLzgwdlUqdL7BfQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "6-Delete",
+			"request": {
+				"url": "http://localhost:8080/api/user/5c10f35e9213216d4d13a245",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBoZWxwZGVzay5jb20iLCJjcmVhdGVkIjoxNTQ0NjE1MDk3NDE1LCJleHAiOjE1NDUyMTk4OTd9.BfM2DFhH8_PmRBLVMjUDd8ZntJUWg33K_8NNeEn4UvTPFlAjLtiyQddMQEHbdhWrgZjdJdHwLzgwdlUqdL7BfQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "7-Ticket-Criar",
+			"request": {
+				"url": "http://localhost:8080/api/ticket",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Test Ticket 1\",\n\t\"priority\": \"NORMAL\",\n\t\"description\": \"Test Description\",\n\t\"image\": \"byte test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "8-Ticket-Atualizar",
+			"request": {
+				"url": "http://localhost:8080/api/ticket",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5c11437092132134cc7678b2\",\n\t\"title\": \"Test Ticket 1\",\n\t\"priority\": \"NORMAL\",\n\t\"description\": \"Test Description changed\",\n\t\"image\": \"byte test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "9-Ticket-FindById",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/5c11437092132134cc7678b2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "10-Ticket-Delete",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/5c11437092132134cc7678b2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "11-Ticket-FindAll",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/0/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "12-Ticket-FindByParams",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/0/10/6867/Test/New/NORMAL/false",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "13-Ticket-ChangeStatus",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/5c1144c292132134cc7678b3/Resolved",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5c11437092132134cc7678b2\",\n\t\"title\": \"Test Ticket 1\",\n\t\"priority\": \"NORMAL\",\n\t\"description\": \"Test Description changed\",\n\t\"image\": \"byte test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "14-Ticket-Summary",
+			"request": {
+				"url": "http://localhost:8080/api/ticket/summary",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lckBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTQ0NjM1MTc3MTE3LCJleHAiOjE1NDUyMzk5Nzd9.WOTyXpdHPRAdzohIzEL6XYAiFlJQl0UrFqi4HMA3Yc8Sr1_6ll9BWKBnWMiRpT2vI4Sf6dku6NbLrIWM5Z9jWw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
